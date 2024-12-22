@@ -1545,6 +1545,22 @@ DEVICE_CUSTOMIZES = {
         'exclude_miot_services': 'machine_state,flag_bit,single_smart_scene',
         'exclude_miot_properties': 'enhance.timer,humidity_range',
     },
+    'xiaomi.vacuum.b108gl': {
+        'sensor_properties': 'status,fault,cleaning_area,cleaning_time,status_extend',
+        'binary_sensor_properties': 'mop_status',
+        'switch_properties': 'edge_swing_tail_sweep,carpet_discriminate,carpet_boost,sweep_break_switch',
+        'select_properties': 'sweep_mop_type,sweep_type,clean_times,suction_level,mop_water_output_level,mode,edge_sweep_frequency,carpet_cleaning_method',
+        'exclude_miot_services': 'vacuum_map',
+    },
+    'xiaomi.vacuum.b108gl:cleaning_area': {
+        'value_ratio': 0.01,
+        'unit_of_measurement': '㎡',
+    },
+    'xiaomi.vacuum.b108gl:cleaning_time': {
+        'value_ratio': 0.016666,
+        'device_class': 'duration',
+        'unit_of_measurement': 'min',
+    },
     'xiaomi.aircondition.ma1': {
         'miot_type': 'urn:miot-spec-v2:device:air-conditioner:0000A004:xiaomi-ma1:4',
     },
